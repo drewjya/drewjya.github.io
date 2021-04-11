@@ -1,0 +1,15 @@
+Cari firebase di google
+bikin project baru
+
+di command line
+pip install firebase-admin
+
+ketik python di terminal bis tu ketik import firebase_admin
+
+
+cra hubungkan backend dgn firebase
+-ke project stting
+-service account
+-copy buat pyhton + download key ny
+-pindahkan keyny ke folder project
+-paste hasil copy-an ke backend.py file
