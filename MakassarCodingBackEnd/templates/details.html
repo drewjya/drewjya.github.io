@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{% block content%}
+    <a href="/"><- Kembali</a>
+    <br>
+    <img src="{{m['foto']}}" alt="">
+    <h2>{{ m['nama'] }}</h2>
+    {% if m['nilai']>60 %}
+        <p class="text-success">Lulus</p>
+    {% else %}
+        <p class="text-danger">Belum Lulus</p>
+    {% endif %}
+    <h6>No HP: {{ m['no_hp'] }}</h6>
+    <h6>Email: {{ m['email'] }}</h6>
+    <h6>Alamat: {{ m['alamat'] }}</h6>
+{% endblock %}

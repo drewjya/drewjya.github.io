@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="/"><- kembali</a>
+            <form action="/updatedata/{{mhs['id']}}" method="post">
+                <h3>Update data</h3>
+                <input placeholder="nama" class="form-control" type="text" name="nama" id="nama" autocomplete="off" value="{{ mhs['nama'] }}">
+                <br>
+                <input placeholder="email" class="form-control" type="text" name="email" id="email" autocomplete="off" value="{{ mhs['email'] }}">
+                <br>
+                <input placeholder="alamat" class="form-control" type="text" name="alamat" id="alamat" autocomplete="off" value="{{ mhs['alamat'] }}">
+                <br>
+                <input placeholder="no_hp" class="form-control" type="text" name="no_hp" id="no_hp" autocomplete="off" value="{{ mhs['no_hp'] }}">
+                <br>
+                <input placeholder="nilai" type="number" class="form-control" name="nilai" id="nilai" autocomplete="off" value="{{ mhs['nilai'] }}">
+                <br>
+                <button type="submit" class="btn btn-block my-2 btn-danger"name="submit" value="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+ini tulisan tidak akan muncul

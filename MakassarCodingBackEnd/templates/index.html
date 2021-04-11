@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+{% block content%}
+    <h2>Daftar Mahasiswa:</h2>
+    <a href="/awal">initialize</a>
+    <a class="text-danger" href="/deleteall">delele all</a>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-4">
+                <form action="/add" method="POST">
+                    <label for="nama">Nama</label>
+                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" autocomplete="off"> <br>
+                    <label for="email">email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="email" autocomplete="off"> <br>
+                    <label for="alamat">alamat</label>
+                    <input type="text" class="form-control" name="alamat" id="alamat" placeholder="alamat" autocomplete="off"> <br>
+                    <label for="no_hp">no_hp</label>
+                    <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="no_hp" autocomplete="off"> <br>
+                    <label for="nilai">Nilai</label>
+                    <input type="number" class="form-control" name="nilai" id="nilai" placeholder="Nilai" autocomplete="off"> <br>
+                    <input type="submit" value="Submit" name="submit" class="btn btn-danger btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+    <ol>
+        {% for s in mhs %}
+        <li class="text-left"><a href="/details/{{s['id']}}">{{s["nama"]}}</a> |
+            <a class="text-success" href="/update/{{ s['id'] }}"> update </a> |
+            <a class="text-danger" href="/delete/{{ s['id'] }}"> delete </a>
+        </li>
+        {% endfor %}
+    </ol>
+{% endblock %}
